@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { gsap } from "gsap";
 import mainImgOne from "../assets/img/cabinets-wall.jpg"
 import subImgTwo from "../assets/img/9936.jpg"
-import subImgThree from "../assets/img/19Z_2011.w020.n001.854B.p15.854.jpg"
+// import subImgThree from "../assets/img/19Z_2011.w020.n001.854B.p15.854.jpg"
 import rightArrow from "../assets/img/right-arrow.png"
 
 
 function Main() {
+    useEffect(() => {
+        gsap.from(".main", { duration: 0, opacity: 0, css: { visibility: "hidden" } })
+    })
     return (
         <div className='main'>
             {/* ROW 1 / SECTION 1 */}
